@@ -1,0 +1,35 @@
+# Ambiente virtual
+venv/
+.env/
+.env.*
+.env
+
+# Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# FastAPI / Uvicorn
+*.log
+
+# Testes
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDEs e editores
+.vscode/
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Banco local (se existir)
+*.sqlite3
+
+# Build
+dist/
+build/
+*.egg-info/
