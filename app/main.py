@@ -1,8 +1,14 @@
+import sys
+import os
+
+# Adiciona o diretório raiz do projeto ao sys.path para evitar erros de importação do módulo 'app'
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List
-from core.config import settings
-from api.v1.router import api_router
+from app.core.config import settings
+from app.api.v1.router import api_router
 
 app = FastAPI(
     title=settings.PROJECT_NAME,

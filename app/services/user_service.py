@@ -1,4 +1,4 @@
-from core.supabase import supabase
+from app.core.supabase import supabase
 
 class UserService:
     def create_user(self, user_data: dict):
