@@ -7,7 +7,6 @@ class ProdutoCreateSchema(BaseModel):
     # Informações Básicas
     nome_produto: str = Field(..., example="Tomate Italiano")
     categoria: Optional[str] = Field(None, example="Legumes")
-    fornecedor_id: int
     
     # Tipo e Preço (Refletindo os Checkboxes e inputs da imagem)
     vende_varejo: bool = False
@@ -33,6 +32,7 @@ class ProdutoCreateSchema(BaseModel):
     
 class ProdutoSchema(ProdutoCreateSchema):
     id: int
+    fornecedor_id: int
 
     class Config:
         from_attributes = True
